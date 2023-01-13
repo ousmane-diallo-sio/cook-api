@@ -1,22 +1,106 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthenticationViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthenticationViewController" customModule="CookAPI" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CookAPI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJ9-nq-Lv2">
+                    <rect key="frame" x="131.66666666666666" y="108.99999999999999" width="129.99999999999997" height="38.333333333333329"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                    <color key="textColor" red="0.45490196350000001" green="0.80392158030000005" blue="0.52941179279999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connexion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCe-N5-s6Q">
+                    <rect key="frame" x="156" y="177.33333333333334" width="81" height="20.333333333333343"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Identifiant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fWq-8z-HBH">
+                    <rect key="frame" x="25" y="297.66666666666669" width="343" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W0o-ww-aLj">
+                    <rect key="frame" x="25" y="356.66666666666669" width="343" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeE-ah-jbV">
+                    <rect key="frame" x="117.00000000000001" y="774.33333333333337" width="159.33333333333337" height="33.666666666666629"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="tinted">
+                        <attributedString key="attributedTitle">
+                            <fragment content="Créer un compte">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="Helvetica-Bold"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <color key="baseForegroundColor" red="0.45490196350000001" green="0.80392158030000005" blue="0.52941179279999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="baseBackgroundColor" red="0.65444508588768258" green="0.98039215800000001" blue="0.63462950094936421" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </buttonConfiguration>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vous n'avez pas de compte ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYT-Ao-dcR">
+                    <rect key="frame" x="96.666666666666671" y="746.33333333333337" width="199.66666666666663" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" systemColor="systemGrayColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcg-X3-sYv">
+                    <rect key="frame" x="20" y="653.66666666666663" width="353" height="50.333333333333371"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Se connecter" buttonSize="large">
+                        <color key="baseBackgroundColor" red="0.45490196350000001" green="0.80392158030000005" blue="0.52941179279999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </buttonConfiguration>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fWq-8z-HBH" secondAttribute="trailing" constant="25" id="0cS-7o-NCk"/>
+                <constraint firstItem="WYT-Ao-dcR" firstAttribute="top" secondItem="wcg-X3-sYv" secondAttribute="bottom" constant="42.333333333333371" id="26B-qB-peH"/>
+                <constraint firstItem="wcg-X3-sYv" firstAttribute="centerX" secondItem="WYT-Ao-dcR" secondAttribute="centerX" id="2My-TR-4jk"/>
+                <constraint firstItem="fWq-8z-HBH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="4gp-OE-yV8"/>
+                <constraint firstItem="KJ9-nq-Lv2" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="6pQ-dM-EZF"/>
+                <constraint firstItem="fWq-8z-HBH" firstAttribute="top" secondItem="oCe-N5-s6Q" secondAttribute="bottom" constant="100" id="7Ac-IV-W8D"/>
+                <constraint firstItem="GeE-ah-jbV" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="7b9-TP-MPW"/>
+                <constraint firstItem="W0o-ww-aLj" firstAttribute="top" secondItem="fWq-8z-HBH" secondAttribute="bottom" constant="25" id="KGl-b5-hft"/>
+                <constraint firstItem="wcg-X3-sYv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Phm-rZ-uuO"/>
+                <constraint firstItem="GeE-ah-jbV" firstAttribute="top" secondItem="WYT-Ao-dcR" secondAttribute="bottom" constant="10" id="QHF-cR-LlX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="W0o-ww-aLj" secondAttribute="trailing" constant="25" id="Qm3-8V-Qsb"/>
+                <constraint firstItem="KJ9-nq-Lv2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="Sx7-fK-BYn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GeE-ah-jbV" secondAttribute="bottom" constant="10" id="T4y-hz-AVM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wcg-X3-sYv" secondAttribute="trailing" constant="20" id="f7G-dS-bu7"/>
+                <constraint firstItem="oCe-N5-s6Q" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="hzd-1u-fj6"/>
+                <constraint firstItem="WYT-Ao-dcR" firstAttribute="centerX" secondItem="GeE-ah-jbV" secondAttribute="centerX" id="sYB-Bw-Xqf"/>
+                <constraint firstItem="oCe-N5-s6Q" firstAttribute="top" secondItem="KJ9-nq-Lv2" secondAttribute="bottom" constant="30" id="uTc-1G-eyV"/>
+                <constraint firstItem="W0o-ww-aLj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="y9U-AK-hmp"/>
+            </constraints>
+            <point key="canvasLocation" x="57.251908396946561" y="20.422535211267608"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
