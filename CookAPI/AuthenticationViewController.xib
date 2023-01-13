@@ -11,6 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthenticationViewController" customModule="CookAPI" customModuleProvider="target">
             <connections>
+                <outlet property="loginButton" destination="wcg-X3-sYv" id="44U-V3-rUx"/>
+                <outlet property="passwordTextField" destination="W0o-ww-aLj" id="HE2-LU-ECJ"/>
+                <outlet property="registrationButton" destination="GeE-ah-jbV" id="OJt-Gq-Om4"/>
+                <outlet property="usernameTextField" destination="fWq-8z-HBH" id="Ubc-8Z-cBk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
