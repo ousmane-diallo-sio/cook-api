@@ -11,6 +11,8 @@
 		CD71A34C295670430094D0ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD71A34B295670430094D0ED /* ViewController.swift */; };
 		CD71A351295670440094D0ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD71A350295670440094D0ED /* Assets.xcassets */; };
 		CD71A354295670440094D0ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD71A352295670440094D0ED /* LaunchScreen.storyboard */; };
+		E49F31CF2971C55800FD01DE /* EditRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F31CD2971C55800FD01DE /* EditRecipeViewController.swift */; };
+		E49F31D02971C55800FD01DE /* EditRecipeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E49F31CE2971C55800FD01DE /* EditRecipeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		CD71A350295670440094D0ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD71A353295670440094D0ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD71A355295670440094D0ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E49F31CD2971C55800FD01DE /* EditRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRecipeViewController.swift; sourceTree = "<group>"; };
+		E49F31CE2971C55800FD01DE /* EditRecipeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditRecipeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				CD71A350295670440094D0ED /* Assets.xcassets */,
 				CD71A352295670440094D0ED /* LaunchScreen.storyboard */,
 				CD71A355295670440094D0ED /* Info.plist */,
+				E49F31CD2971C55800FD01DE /* EditRecipeViewController.swift */,
+				E49F31CE2971C55800FD01DE /* EditRecipeViewController.xib */,
 			);
 			path = CookAPI;
 			sourceTree = "<group>";
@@ -121,6 +127,7 @@
 			files = (
 				CD71A354295670440094D0ED /* LaunchScreen.storyboard in Resources */,
 				CD71A351295670440094D0ED /* Assets.xcassets in Resources */,
+				E49F31D02971C55800FD01DE /* EditRecipeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E49F31CF2971C55800FD01DE /* EditRecipeViewController.swift in Sources */,
 				CD71A34C295670430094D0ED /* ViewController.swift in Sources */,
 				CD71A348295670430094D0ED /* AppDelegate.swift in Sources */,
 			);
