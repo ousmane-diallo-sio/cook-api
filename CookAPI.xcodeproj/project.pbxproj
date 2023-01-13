@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD4BD9E02971CB08001371CA /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4BD9DE2971CB08001371CA /* FeedViewController.swift */; };
+		CD4BD9E12971CB08001371CA /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD9DF2971CB08001371CA /* FeedViewController.xib */; };
+		CD4BD9ED2971CDFB001371CA /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4BD9EB2971CDFB001371CA /* RecipeTableViewCell.swift */; };
+		CD4BD9EE2971CDFB001371CA /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4BD9EC2971CDFB001371CA /* RecipeTableViewCell.xib */; };
+		CD4BD9F12971D083001371CA /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4BD9F02971D083001371CA /* Recipe.swift */; };
 		CD71A348295670430094D0ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD71A347295670430094D0ED /* AppDelegate.swift */; };
 		CD71A34C295670430094D0ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD71A34B295670430094D0ED /* ViewController.swift */; };
 		CD71A351295670440094D0ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD71A350295670440094D0ED /* Assets.xcassets */; };
@@ -14,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD4BD9DE2971CB08001371CA /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		CD4BD9DF2971CB08001371CA /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
+		CD4BD9EB2971CDFB001371CA /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		CD4BD9EC2971CDFB001371CA /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
+		CD4BD9F02971D083001371CA /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		CD71A344295670430094D0ED /* CookAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD71A347295670430094D0ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD71A34B295670430094D0ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +43,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD4BD9E22971CB56001371CA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CD4BD9EB2971CDFB001371CA /* RecipeTableViewCell.swift */,
+				CD4BD9EC2971CDFB001371CA /* RecipeTableViewCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		CD4BD9EF2971D076001371CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD4BD9F02971D083001371CA /* Recipe.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CD71A33B295670420094D0ED = {
 			isa = PBXGroup;
 			children = (
@@ -52,11 +79,15 @@
 		CD71A346295670430094D0ED /* CookAPI */ = {
 			isa = PBXGroup;
 			children = (
+				CD4BD9EF2971D076001371CA /* Model */,
+				CD4BD9E22971CB56001371CA /* Components */,
 				CD71A347295670430094D0ED /* AppDelegate.swift */,
 				CD71A34B295670430094D0ED /* ViewController.swift */,
 				CD71A350295670440094D0ED /* Assets.xcassets */,
 				CD71A352295670440094D0ED /* LaunchScreen.storyboard */,
 				CD71A355295670440094D0ED /* Info.plist */,
+				CD4BD9DE2971CB08001371CA /* FeedViewController.swift */,
+				CD4BD9DF2971CB08001371CA /* FeedViewController.xib */,
 			);
 			path = CookAPI;
 			sourceTree = "<group>";
@@ -120,7 +151,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD71A354295670440094D0ED /* LaunchScreen.storyboard in Resources */,
+				CD4BD9E12971CB08001371CA /* FeedViewController.xib in Resources */,
 				CD71A351295670440094D0ED /* Assets.xcassets in Resources */,
+				CD4BD9EE2971CDFB001371CA /* RecipeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +165,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD71A34C295670430094D0ED /* ViewController.swift in Sources */,
+				CD4BD9E02971CB08001371CA /* FeedViewController.swift in Sources */,
 				CD71A348295670430094D0ED /* AppDelegate.swift in Sources */,
+				CD4BD9ED2971CDFB001371CA /* RecipeTableViewCell.swift in Sources */,
+				CD4BD9F12971D083001371CA /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
