@@ -11,10 +11,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthenticationViewController" customModule="CookAPI" customModuleProvider="target">
             <connections>
-                <outlet property="loginButton" destination="wcg-X3-sYv" id="44U-V3-rUx"/>
-                <outlet property="passwordTextField" destination="W0o-ww-aLj" id="HE2-LU-ECJ"/>
-                <outlet property="registrationButton" destination="GeE-ah-jbV" id="OJt-Gq-Om4"/>
-                <outlet property="usernameTextField" destination="fWq-8z-HBH" id="Ubc-8Z-cBk"/>
+                <outlet property="loginButton" destination="wcg-X3-sYv" id="dK9-lt-ruG"/>
+                <outlet property="mailErrorLabel" destination="Fl3-zm-U7u" id="7DV-7c-eYu"/>
+                <outlet property="mailTextField" destination="fWq-8z-HBH" id="mIX-jl-IbZ"/>
+                <outlet property="passwordErrorLabel" destination="icL-ba-0JK" id="8P6-Ch-Ruo"/>
+                <outlet property="passwordTextField" destination="W0o-ww-aLj" id="rVZ-R7-eF8"/>
+                <outlet property="registrationButton" destination="GeE-ah-jbV" id="IaG-lD-BbS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,19 +31,19 @@
                     <color key="textColor" red="0.45490196350000001" green="0.80392158030000005" blue="0.52941179279999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connexion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCe-N5-s6Q">
-                    <rect key="frame" x="156" y="177.33333333333334" width="81" height="20.333333333333343"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connectez-vous" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCe-N5-s6Q">
+                    <rect key="frame" x="134" y="177.33333333333334" width="125" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Identifiant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fWq-8z-HBH">
-                    <rect key="frame" x="25" y="297.66666666666669" width="343" height="34"/>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fWq-8z-HBH">
+                    <rect key="frame" x="25" y="298.33333333333331" width="343" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W0o-ww-aLj">
-                    <rect key="frame" x="25" y="356.66666666666669" width="343" height="34"/>
+                    <rect key="frame" x="25" y="357.33333333333331" width="343" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
@@ -72,13 +74,29 @@
                     <buttonConfiguration key="configuration" style="filled" title="Se connecter" buttonSize="large">
                         <color key="baseBackgroundColor" red="0.45490196350000001" green="0.80392158030000005" blue="0.52941179279999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="handleLogin:" destination="-1" eventType="touchUpInside" id="mVm-jE-Uxq"/>
+                    </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail ou mot de passe invalide" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icL-ba-0JK">
+                    <rect key="frame" x="25" y="396.33333333333331" width="180" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail ou mot de passe invalide" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fl3-zm-U7u">
+                    <rect key="frame" x="25" y="337.33333333333331" width="180" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fWq-8z-HBH" secondAttribute="trailing" constant="25" id="0cS-7o-NCk"/>
                 <constraint firstItem="WYT-Ao-dcR" firstAttribute="top" secondItem="wcg-X3-sYv" secondAttribute="bottom" constant="42.333333333333371" id="26B-qB-peH"/>
+                <constraint firstItem="Fl3-zm-U7u" firstAttribute="top" secondItem="fWq-8z-HBH" secondAttribute="bottom" constant="5" id="2Cj-Mf-zrd"/>
                 <constraint firstItem="wcg-X3-sYv" firstAttribute="centerX" secondItem="WYT-Ao-dcR" secondAttribute="centerX" id="2My-TR-4jk"/>
                 <constraint firstItem="fWq-8z-HBH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="4gp-OE-yV8"/>
                 <constraint firstItem="KJ9-nq-Lv2" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="6pQ-dM-EZF"/>
@@ -90,9 +108,12 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="W0o-ww-aLj" secondAttribute="trailing" constant="25" id="Qm3-8V-Qsb"/>
                 <constraint firstItem="KJ9-nq-Lv2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="Sx7-fK-BYn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GeE-ah-jbV" secondAttribute="bottom" constant="10" id="T4y-hz-AVM"/>
+                <constraint firstItem="Fl3-zm-U7u" firstAttribute="leading" secondItem="fWq-8z-HBH" secondAttribute="leading" id="cd0-g3-ceg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wcg-X3-sYv" secondAttribute="trailing" constant="20" id="f7G-dS-bu7"/>
                 <constraint firstItem="oCe-N5-s6Q" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="hzd-1u-fj6"/>
+                <constraint firstItem="icL-ba-0JK" firstAttribute="top" secondItem="W0o-ww-aLj" secondAttribute="bottom" constant="5" id="pGj-bw-6CK"/>
                 <constraint firstItem="WYT-Ao-dcR" firstAttribute="centerX" secondItem="GeE-ah-jbV" secondAttribute="centerX" id="sYB-Bw-Xqf"/>
+                <constraint firstItem="icL-ba-0JK" firstAttribute="leading" secondItem="W0o-ww-aLj" secondAttribute="leading" id="t05-3K-Tue"/>
                 <constraint firstItem="oCe-N5-s6Q" firstAttribute="top" secondItem="KJ9-nq-Lv2" secondAttribute="bottom" constant="30" id="uTc-1G-eyV"/>
                 <constraint firstItem="W0o-ww-aLj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="y9U-AK-hmp"/>
             </constraints>
@@ -105,6 +126,9 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
