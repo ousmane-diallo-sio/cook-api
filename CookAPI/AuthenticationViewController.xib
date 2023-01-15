@@ -26,29 +26,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CookAPI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJ9-nq-Lv2">
-                    <rect key="frame" x="131.66666666666666" y="108.99999999999999" width="129.99999999999997" height="38.333333333333329"/>
+                    <rect key="frame" x="131.66666666666666" y="50" width="129.99999999999997" height="38.333333333333343"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                     <color key="textColor" red="0.45490196350000001" green="0.80392158030000005" blue="0.52941179279999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connectez-vous" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCe-N5-s6Q">
-                    <rect key="frame" x="134" y="177.33333333333334" width="125" height="21"/>
+                    <rect key="frame" x="134" y="118.33333333333331" width="125" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fWq-8z-HBH">
-                    <rect key="frame" x="25" y="298.33333333333331" width="343" height="34"/>
+                    <rect key="frame" x="25" y="239.33333333333337" width="343" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W0o-ww-aLj">
-                    <rect key="frame" x="25" y="357.33333333333331" width="343" height="34"/>
+                    <rect key="frame" x="25" y="298.33333333333331" width="343" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeE-ah-jbV">
-                    <rect key="frame" x="117.00000000000001" y="774.33333333333337" width="159.33333333333337" height="33.666666666666629"/>
+                    <rect key="frame" x="117.00000000000001" y="808.33333333333337" width="159.33333333333337" height="33.666666666666629"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="tinted">
                         <attributedString key="attributedTitle">
@@ -61,15 +61,18 @@
                         <color key="baseForegroundColor" red="0.45490196350000001" green="0.80392158030000005" blue="0.52941179279999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="baseBackgroundColor" red="0.65444508588768258" green="0.98039215800000001" blue="0.63462950094936421" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="handleRegistration:" destination="-1" eventType="touchUpInside" id="k1U-o8-etl"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vous n'avez pas de compte ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYT-Ao-dcR">
-                    <rect key="frame" x="96.666666666666671" y="746.33333333333337" width="199.66666666666663" height="18"/>
+                    <rect key="frame" x="96.666666666666671" y="780.33333333333337" width="199.66666666666663" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" systemColor="systemGrayColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcg-X3-sYv">
-                    <rect key="frame" x="20" y="653.66666666666663" width="353" height="50.333333333333371"/>
+                    <rect key="frame" x="20" y="687.66666666666663" width="353" height="50.333333333333371"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Se connecter" buttonSize="large">
                         <color key="baseBackgroundColor" red="0.45490196350000001" green="0.80392158030000005" blue="0.52941179279999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -79,13 +82,13 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail ou mot de passe invalide" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icL-ba-0JK">
-                    <rect key="frame" x="25" y="396.33333333333331" width="180" height="15"/>
+                    <rect key="frame" x="25" y="337.33333333333331" width="180" height="15"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" systemColor="systemRedColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail ou mot de passe invalide" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fl3-zm-U7u">
-                    <rect key="frame" x="25" y="337.33333333333331" width="180" height="15"/>
+                    <rect key="frame" x="25" y="278.33333333333331" width="180" height="15"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" systemColor="systemRedColor"/>
                     <nil key="highlightedColor"/>

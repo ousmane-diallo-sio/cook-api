@@ -35,6 +35,10 @@ class AuthenticationViewController: UIViewController {
          */
     }
     
+    @IBAction func handleRegistration(_ sender: UIButton) {
+        self.navigationController?.pushViewController(RegistrationViewController(), animated: true)
+    }
+    
      override func viewWillAppear(_ animated: Bool) {
          handle = Auth.auth().addStateDidChangeListener { auth, user in
              if user != nil {
