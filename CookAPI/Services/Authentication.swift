@@ -26,4 +26,12 @@ class Authentication {
     class func getCurrentUser() -> User? {
         return auth.currentUser
     }
+    
+    class func register(email: String, password: String) {
+        auth.createUser(withEmail: email, password: password) { authResult, error in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+        }
+    }
 }

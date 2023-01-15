@@ -10,6 +10,8 @@
 		7D2A2CF72973000400F3758F /* SuccessAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A2CF52973000400F3758F /* SuccessAuthViewController.swift */; };
 		7D2A2CF82973000400F3758F /* SuccessAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D2A2CF62973000400F3758F /* SuccessAuthViewController.xib */; };
 		7D2A2CFA297303A100F3758F /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A2CF9297303A100F3758F /* Authentication.swift */; };
+		7D2A2CFE297365C800F3758F /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A2CFC297365C800F3758F /* RegistrationViewController.swift */; };
+		7D2A2CFF297365C800F3758F /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D2A2CFD297365C800F3758F /* RegistrationViewController.xib */; };
 		7D3FFE562971CAF900AF346C /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FFE542971CAF900AF346C /* AuthenticationViewController.swift */; };
 		7D3FFE572971CAF900AF346C /* AuthenticationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D3FFE552971CAF900AF346C /* AuthenticationViewController.xib */; };
 		7D3FFE5A2971DE7F00AF346C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7D3FFE592971DE7F00AF346C /* FirebaseAuth */; };
@@ -25,6 +27,8 @@
 		7D2A2CF52973000400F3758F /* SuccessAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessAuthViewController.swift; sourceTree = "<group>"; };
 		7D2A2CF62973000400F3758F /* SuccessAuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuccessAuthViewController.xib; sourceTree = "<group>"; };
 		7D2A2CF9297303A100F3758F /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		7D2A2CFC297365C800F3758F /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		7D2A2CFD297365C800F3758F /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 		7D3FFE542971CAF900AF346C /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		7D3FFE552971CAF900AF346C /* AuthenticationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationViewController.xib; sourceTree = "<group>"; };
 		7D3FFE652971E72800AF346C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 				7D3FFE552971CAF900AF346C /* AuthenticationViewController.xib */,
 				7D2A2CF52973000400F3758F /* SuccessAuthViewController.swift */,
 				7D2A2CF62973000400F3758F /* SuccessAuthViewController.xib */,
+				7D2A2CFC297365C800F3758F /* RegistrationViewController.swift */,
+				7D2A2CFD297365C800F3758F /* RegistrationViewController.xib */,
 			);
 			path = CookAPI;
 			sourceTree = "<group>";
@@ -159,6 +165,7 @@
 				7D2A2CF82973000400F3758F /* SuccessAuthViewController.xib in Resources */,
 				7D3FFE572971CAF900AF346C /* AuthenticationViewController.xib in Resources */,
 				7D3FFE662971E72800AF346C /* GoogleService-Info.plist in Resources */,
+				7D2A2CFF297365C800F3758F /* RegistrationViewController.xib in Resources */,
 				CD71A354295670440094D0ED /* LaunchScreen.storyboard in Resources */,
 				CD71A351295670440094D0ED /* Assets.xcassets in Resources */,
 			);
@@ -175,6 +182,7 @@
 				7D3FFE562971CAF900AF346C /* AuthenticationViewController.swift in Sources */,
 				7D2A2CFA297303A100F3758F /* Authentication.swift in Sources */,
 				CD71A348295670430094D0ED /* AppDelegate.swift in Sources */,
+				7D2A2CFE297365C800F3758F /* RegistrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
