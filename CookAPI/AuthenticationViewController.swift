@@ -50,5 +50,4 @@ class AuthenticationViewController: UIViewController {
      override func viewWillDisappear(_ animated: Bool) {
          Auth.auth().removeStateDidChangeListener(handle!)
      }
-     
 }

@@ -16,6 +16,7 @@
                 <outlet property="lastNameTextField" destination="ftw-6A-TnN" id="Clt-dF-ObT"/>
                 <outlet property="passwordConfirmationTextField" destination="S7d-D6-lqs" id="SHO-iz-FUf"/>
                 <outlet property="passwordTextField" destination="jJ2-HX-qFZ" id="weA-ed-cvV"/>
+                <outlet property="usernameTextField" destination="9jL-q2-SAb" id="O1k-z1-pPN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -37,27 +38,27 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ftw-6A-TnN">
-                    <rect key="frame" x="25" y="298.33333333333331" width="343" height="34"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Prénom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9iF-Aj-tSt">
                     <rect key="frame" x="25" y="357.33333333333331" width="343" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AEd-pT-9mU">
-                    <rect key="frame" x="25" y="417.33333333333331" width="343" height="34"/>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Prénom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9iF-Aj-tSt">
+                    <rect key="frame" x="25" y="416.33333333333331" width="343" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jJ2-HX-qFZ">
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AEd-pT-9mU">
                     <rect key="frame" x="25" y="476.33333333333331" width="343" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe (confirmation)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S7d-D6-lqs">
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jJ2-HX-qFZ">
                     <rect key="frame" x="25" y="535.33333333333337" width="343" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe (confirmation)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S7d-D6-lqs">
+                    <rect key="frame" x="25" y="594.33333333333337" width="343" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
@@ -71,11 +72,18 @@
                         <action selector="handleRegistration:" destination="-1" eventType="touchUpInside" id="bTo-WG-8jd"/>
                     </connections>
                 </button>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pseudonyme" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9jL-q2-SAb">
+                    <rect key="frame" x="25" y="298.33333333333331" width="343" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oBk-F7-cfN" secondAttribute="trailing" constant="20" id="0SN-Pz-j3v"/>
+                <constraint firstItem="9jL-q2-SAb" firstAttribute="top" secondItem="aIn-mh-XdA" secondAttribute="bottom" constant="100" id="5Uh-a2-3n9"/>
+                <constraint firstItem="9jL-q2-SAb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="8US-qQ-dlo"/>
                 <constraint firstItem="ZWV-0T-acb" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="8nd-ay-NIv"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="S7d-D6-lqs" secondAttribute="trailing" constant="25" id="98Y-cx-mDV"/>
                 <constraint firstItem="oBk-F7-cfN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="9HX-sg-4mp"/>
@@ -91,7 +99,8 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9iF-Aj-tSt" secondAttribute="trailing" constant="25" id="dxd-va-M9U"/>
                 <constraint firstItem="jJ2-HX-qFZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="fat-px-HKN"/>
                 <constraint firstItem="aIn-mh-XdA" firstAttribute="top" secondItem="ZWV-0T-acb" secondAttribute="bottom" constant="30" id="gKK-dZ-x7K"/>
-                <constraint firstItem="ftw-6A-TnN" firstAttribute="top" secondItem="aIn-mh-XdA" secondAttribute="bottom" constant="100" id="hqr-TB-lh3"/>
+                <constraint firstItem="ftw-6A-TnN" firstAttribute="top" secondItem="9jL-q2-SAb" secondAttribute="bottom" constant="25" id="gMY-lw-cmF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9jL-q2-SAb" secondAttribute="trailing" constant="25" id="i7e-7X-mtH"/>
                 <constraint firstItem="AEd-pT-9mU" firstAttribute="top" secondItem="9iF-Aj-tSt" secondAttribute="bottom" constant="26" id="lve-c6-Qln"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="oBk-F7-cfN" secondAttribute="bottom" constant="80" id="miH-UP-p6J"/>
                 <constraint firstItem="9iF-Aj-tSt" firstAttribute="top" secondItem="ftw-6A-TnN" secondAttribute="bottom" constant="25" id="nUY-Yi-6xM"/>

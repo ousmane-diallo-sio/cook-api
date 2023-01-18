@@ -17,7 +17,10 @@
 		7D3FFE5A2971DE7F00AF346C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7D3FFE592971DE7F00AF346C /* FirebaseAuth */; };
 		7D3FFE5C2971DE7F00AF346C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7D3FFE5B2971DE7F00AF346C /* FirebaseFirestore */; };
 		7D3FFE5E2971DE7F00AF346C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 7D3FFE5D2971DE7F00AF346C /* FirebaseStorage */; };
-		7D3FFE662971E72800AF346C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D3FFE652971E72800AF346C /* GoogleService-Info.plist */; };
+		7D4222DB29789A3000D148F1 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4222DA29789A3000D148F1 /* Database.swift */; };
+		7D4222DD29789C6400D148F1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4222DC29789C6400D148F1 /* User.swift */; };
+		7D4222E029789CEF00D148F1 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4222DF29789CEF00D148F1 /* Recipe.swift */; };
+		7D4222E62978AED900D148F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D4222E52978AED900D148F1 /* GoogleService-Info.plist */; };
 		CD71A348295670430094D0ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD71A347295670430094D0ED /* AppDelegate.swift */; };
 		CD71A351295670440094D0ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD71A350295670440094D0ED /* Assets.xcassets */; };
 		CD71A354295670440094D0ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD71A352295670440094D0ED /* LaunchScreen.storyboard */; };
@@ -31,7 +34,10 @@
 		7D2A2CFD297365C800F3758F /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 		7D3FFE542971CAF900AF346C /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		7D3FFE552971CAF900AF346C /* AuthenticationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationViewController.xib; sourceTree = "<group>"; };
-		7D3FFE652971E72800AF346C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7D4222DA29789A3000D148F1 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		7D4222DC29789C6400D148F1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7D4222DF29789CEF00D148F1 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		7D4222E52978AED900D148F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CD71A344295670430094D0ED /* CookAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD71A347295670430094D0ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD71A350295670440094D0ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,8 +63,18 @@
 			isa = PBXGroup;
 			children = (
 				7D2A2CF9297303A100F3758F /* Authentication.swift */,
+				7D4222DA29789A3000D148F1 /* Database.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		7D4222DE29789C6900D148F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D4222DC29789C6400D148F1 /* User.swift */,
+				7D4222DF29789CEF00D148F1 /* Recipe.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		CD71A33B295670420094D0ED = {
@@ -81,11 +97,12 @@
 			isa = PBXGroup;
 			children = (
 				7D2A2CFB29730A4200F3758F /* Services */,
+				7D4222DE29789C6900D148F1 /* Models */,
 				CD71A347295670430094D0ED /* AppDelegate.swift */,
 				CD71A350295670440094D0ED /* Assets.xcassets */,
-				7D3FFE652971E72800AF346C /* GoogleService-Info.plist */,
 				CD71A352295670440094D0ED /* LaunchScreen.storyboard */,
 				CD71A355295670440094D0ED /* Info.plist */,
+				7D4222E52978AED900D148F1 /* GoogleService-Info.plist */,
 				7D3FFE542971CAF900AF346C /* AuthenticationViewController.swift */,
 				7D3FFE552971CAF900AF346C /* AuthenticationViewController.xib */,
 				7D2A2CF52973000400F3758F /* SuccessAuthViewController.swift */,
@@ -164,10 +181,10 @@
 			files = (
 				7D2A2CF82973000400F3758F /* SuccessAuthViewController.xib in Resources */,
 				7D3FFE572971CAF900AF346C /* AuthenticationViewController.xib in Resources */,
-				7D3FFE662971E72800AF346C /* GoogleService-Info.plist in Resources */,
 				7D2A2CFF297365C800F3758F /* RegistrationViewController.xib in Resources */,
 				CD71A354295670440094D0ED /* LaunchScreen.storyboard in Resources */,
 				CD71A351295670440094D0ED /* Assets.xcassets in Resources */,
+				7D4222E62978AED900D148F1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,11 +195,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D4222DB29789A3000D148F1 /* Database.swift in Sources */,
 				7D2A2CF72973000400F3758F /* SuccessAuthViewController.swift in Sources */,
 				7D3FFE562971CAF900AF346C /* AuthenticationViewController.swift in Sources */,
 				7D2A2CFA297303A100F3758F /* Authentication.swift in Sources */,
 				CD71A348295670430094D0ED /* AppDelegate.swift in Sources */,
 				7D2A2CFE297365C800F3758F /* RegistrationViewController.swift in Sources */,
+				7D4222DD29789C6400D148F1 /* User.swift in Sources */,
+				7D4222E029789CEF00D148F1 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
