@@ -9,7 +9,7 @@ import UIKit
 
 class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var recipes: [Recipe] = []
+    var recipes: [RecipeModel] = []
     
     @IBOutlet weak var recipeTableView: UITableView!
     
@@ -26,7 +26,19 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        recipes.append(Recipe())
+        let testImgUrl = "https://testmatick.com/wp-content/uploads/2020/09/What-s-the-best-way-to-test-embedded-images-in-HTML.png"
+        let r = RecipeModel(
+            author: UserModel(username: "pseudo", firstname: "Prenom", lastname: "nom", email: "a@example.com", picture: testImgUrl),
+            imgUrl: testImgUrl,
+            title: "Ceci est le titre",
+            desc: "Blabla je raconte n'importe quoi afin de tester",
+            ingredients: [IngredientModel()],
+            category: "nil",
+            dish: "nil",
+            steps: [RecipeStepModel()],
+            rating: RatingModel.three
+        )
+        recipes.append(r)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,6 +47,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCellId", for: indexPath) as! RecipeTableViewCell
+        cell.redraw(recipe: recipes[indexPath.row])
         return cell
     }
     

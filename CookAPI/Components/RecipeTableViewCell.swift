@@ -9,13 +9,29 @@ import UIKit
 
 class RecipeTableViewCell: UITableViewCell {
     
-    var recipe: Recipe
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDesc: UILabel!
     @IBOutlet weak var labelUsername: UILabel!
+    @IBOutlet weak var ivImage: UIImageView!
+    @IBOutlet weak var ivProfilePic: UIImageView!
+    @IBOutlet weak var vRatingContainer: UIView!
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    func redraw(recipe: RecipeModel) {
+        labelTitle.text = recipe.title
+        labelDesc.text = recipe.desc
+        labelUsername.text = recipe.author.username
+        for i in 0 ..< vRatingContainer.subviews.count {
+            if (recipe.rating.rawValue > i) {
+                (vRatingContainer.subviews[i] as UIView).tintColor = UIColor.yellow
+            }
+        }
+        
+        guard let img = ImageFactory.getFromUrl(url: URL(string: recipe.imgUrl)!),
+              let imgProfile = ImageFactory.getFromUrl(url: URL(string: recipe.author.picture)!) else {
+            return
+        }
+        self.ivImage.image = img
+        self.ivProfilePic.image = imgProfile
     }
     
     override func awakeFromNib() {
@@ -26,10 +42,6 @@ class RecipeTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
-    }
-    
-    func setRecipe(recipe: Recipe) {
-        self.recipe = recipe
     }
     
 }
