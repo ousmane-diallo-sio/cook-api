@@ -9,7 +9,7 @@ import UIKit
 
 class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    //var recipes: [Recipe] = []
+    var recipes: [Recipe] = []
     
     @IBOutlet weak var recipeTableView: UITableView!
     
@@ -26,11 +26,11 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //recipes.append(Recipe())
+        recipes.append(Recipe())
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0 //self.recipes.count
+        return self.recipes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

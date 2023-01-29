@@ -76,6 +76,8 @@
 				CD4BD9EC2971CDFB001371CA /* RecipeTableViewCell.xib */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
 		7D2A2CFB29730A4200F3758F /* Services */ = {
 			isa = PBXGroup;
 			children = (
