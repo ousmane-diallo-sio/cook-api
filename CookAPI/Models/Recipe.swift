@@ -9,6 +9,8 @@ import Foundation
 
 class RecipeModel {
     
+    static var currentRecipe: RecipeModel?
+    
     let author: UserModel
     let imgUrl: String
     let title: String

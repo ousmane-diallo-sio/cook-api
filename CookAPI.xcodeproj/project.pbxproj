@@ -35,6 +35,8 @@
 		CD71A34C295670430094D0ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD71A34B295670430094D0ED /* ViewController.swift */; };
 		CD71A351295670440094D0ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD71A350295670440094D0ED /* Assets.xcassets */; };
 		CD71A354295670440094D0ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD71A352295670440094D0ED /* LaunchScreen.storyboard */; };
+		CDFD3A5E2993B10100CF066D /* FullRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFD3A5C2993B10100CF066D /* FullRecipeViewController.swift */; };
+		CDFD3A5F2993B10100CF066D /* FullRecipeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDFD3A5D2993B10100CF066D /* FullRecipeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,8 @@
 		CD71A350295670440094D0ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD71A353295670440094D0ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD71A355295670440094D0ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDFD3A5C2993B10100CF066D /* FullRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullRecipeViewController.swift; sourceTree = "<group>"; };
+		CDFD3A5D2993B10100CF066D /* FullRecipeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullRecipeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,8 @@
 				7D4222DE29789C6900D148F1 /* Models */,
 				CD71A347295670430094D0ED /* AppDelegate.swift */,
 				CD71A34B295670430094D0ED /* ViewController.swift */,
+				CDFD3A5C2993B10100CF066D /* FullRecipeViewController.swift */,
+				CDFD3A5D2993B10100CF066D /* FullRecipeViewController.xib */,
 				CD71A350295670440094D0ED /* Assets.xcassets */,
 				CD71A352295670440094D0ED /* LaunchScreen.storyboard */,
 				CD71A355295670440094D0ED /* Info.plist */,
@@ -229,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D2A2CF82973000400F3758F /* SuccessAuthViewController.xib in Resources */,
+				CDFD3A5F2993B10100CF066D /* FullRecipeViewController.xib in Resources */,
 				7D3FFE572971CAF900AF346C /* AuthenticationViewController.xib in Resources */,
 				CD363DEF2991157800C0D025 /* RecipeView.xib in Resources */,
 				7D2A2CFF297365C800F3758F /* RegistrationViewController.xib in Resources */,
@@ -251,6 +258,7 @@
 				CD5505082987085C00F19624 /* Rating.swift in Sources */,
 				CD55050A298708B700F19624 /* Ingredient.swift in Sources */,
 				CD71A34C295670430094D0ED /* ViewController.swift in Sources */,
+				CDFD3A5E2993B10100CF066D /* FullRecipeViewController.swift in Sources */,
 				CD4BD9E02971CB08001371CA /* FeedViewController.swift in Sources */,
 				7D4222DB29789A3000D148F1 /* Database.swift in Sources */,
 				7D2A2CF72973000400F3758F /* SuccessAuthViewController.swift in Sources */,

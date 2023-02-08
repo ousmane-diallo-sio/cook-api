@@ -8,7 +8,7 @@
 import UIKit
 
 class RecipeView: UIView {
-
+    
     static let id = "RecipeView"
     
     @IBOutlet var mainView: UIView!

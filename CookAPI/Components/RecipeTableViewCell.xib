@@ -27,16 +27,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="Voir la recette complète">
-                            <backgroundConfiguration key="background">
+                            <backgroundConfiguration key="background" cornerRadius="0.0">
                                 <color key="backgroundColor" red="0.48625776631687467" green="0.86337989267676774" blue="0.5748225064289797" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </backgroundConfiguration>
                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </buttonConfiguration>
+                        <connections>
+                            <action selector="seeFullRecipe:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="lu1-FE-bCU"/>
+                        </connections>
                     </button>
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="btnNavFullRecipe" destination="ika-MP-DKm" id="Dkz-FW-kJ2"/>
                 <outlet property="recipeView" destination="RJK-YL-vcn" id="Mcq-lg-S9u"/>
             </connections>
             <point key="canvasLocation" x="88.549618320610676" y="138.38028169014086"/>
