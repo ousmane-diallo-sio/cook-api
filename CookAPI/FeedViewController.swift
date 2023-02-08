@@ -36,7 +36,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             category: "nil",
             dish: "nil",
             steps: [RecipeStepModel()],
-            rating: RatingModel.three
+            rating: RatingModel.two
         )
         recipes.append(r)
     }

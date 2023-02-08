@@ -10,14 +10,16 @@ import UIKit
 
 class ImageFactory {
     
-    class func getFromUrl(url: URL) -> UIImage? {
-        // Modifier la fonction et faire un appel asynchrone
-        let imgData = try? Data(contentsOf: url)
-
-        if let imageData = imgData {
-            return UIImage(data: imageData)
+    class func getFromUrl(url: URL, callBack: @escaping (Data?, Error?) -> Void) {
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            guard error == nil, let d = data else {
+                callBack(nil, error)
+                return
+            }
+            
+            callBack(d, nil)
         }
-        return nil
+        task.resume()
     }
-    
 }
