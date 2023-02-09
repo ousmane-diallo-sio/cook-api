@@ -21,6 +21,8 @@
 		7D4222DD29789C6400D148F1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4222DC29789C6400D148F1 /* User.swift */; };
 		7D4222E029789CEF00D148F1 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4222DF29789CEF00D148F1 /* Recipe.swift */; };
 		7D4222E62978AED900D148F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D4222E52978AED900D148F1 /* GoogleService-Info.plist */; };
+		7DF1226329945ABC002C7FF3 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF1226129945ABC002C7FF3 /* EditProfileViewController.swift */; };
+		7DF1226429945ABC002C7FF3 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DF1226229945ABC002C7FF3 /* EditProfileViewController.xib */; };
 		CD71A348295670430094D0ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD71A347295670430094D0ED /* AppDelegate.swift */; };
 		CD71A351295670440094D0ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD71A350295670440094D0ED /* Assets.xcassets */; };
 		CD71A354295670440094D0ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD71A352295670440094D0ED /* LaunchScreen.storyboard */; };
@@ -38,6 +40,8 @@
 		7D4222DC29789C6400D148F1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7D4222DF29789CEF00D148F1 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		7D4222E52978AED900D148F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7DF1226129945ABC002C7FF3 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		7DF1226229945ABC002C7FF3 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		CD71A344295670430094D0ED /* CookAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD71A347295670430094D0ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD71A350295670440094D0ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				7D2A2CF62973000400F3758F /* SuccessAuthViewController.xib */,
 				7D2A2CFC297365C800F3758F /* RegistrationViewController.swift */,
 				7D2A2CFD297365C800F3758F /* RegistrationViewController.xib */,
+				7DF1226129945ABC002C7FF3 /* EditProfileViewController.swift */,
+				7DF1226229945ABC002C7FF3 /* EditProfileViewController.xib */,
 			);
 			path = CookAPI;
 			sourceTree = "<group>";
@@ -182,6 +188,7 @@
 				7D2A2CF82973000400F3758F /* SuccessAuthViewController.xib in Resources */,
 				7D3FFE572971CAF900AF346C /* AuthenticationViewController.xib in Resources */,
 				7D2A2CFF297365C800F3758F /* RegistrationViewController.xib in Resources */,
+				7DF1226429945ABC002C7FF3 /* EditProfileViewController.xib in Resources */,
 				CD71A354295670440094D0ED /* LaunchScreen.storyboard in Resources */,
 				CD71A351295670440094D0ED /* Assets.xcassets in Resources */,
 				7D4222E62978AED900D148F1 /* GoogleService-Info.plist in Resources */,
@@ -203,6 +210,7 @@
 				7D2A2CFE297365C800F3758F /* RegistrationViewController.swift in Sources */,
 				7D4222DD29789C6400D148F1 /* User.swift in Sources */,
 				7D4222E029789CEF00D148F1 /* Recipe.swift in Sources */,
+				7DF1226329945ABC002C7FF3 /* EditProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

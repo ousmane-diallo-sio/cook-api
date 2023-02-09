@@ -16,8 +16,10 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmationTextField: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,7 @@ class RegistrationViewController: UIViewController {
             lastNameTextField.text?.isEmpty ?? true ||
             firstNameTextField.text?.isEmpty ?? true ||
             emailTextField.text?.isEmpty ?? true ||
+            phoneTextField.text?.isEmpty ?? true ||
             passwordTextField.text?.isEmpty ?? true
         ) {
             print("")
@@ -40,7 +43,7 @@ class RegistrationViewController: UIViewController {
         if passwordTextField.text != nil && passwordConfirmationTextField.text != nil {
             if passwordTextField.text!.count > 7 && passwordTextField.text!.elementsEqual(passwordConfirmationTextField.text!) {
                 Authentication.register(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
-                let userModel = UserModel(username: usernameTextField.text!, firstname: firstNameTextField.text!, lastname: lastNameTextField.text!, email: emailTextField.text!)
+                let userModel = UserModel(username: usernameTextField.text!, firstname: firstNameTextField.text!, lastname: lastNameTextField.text!, email: emailTextField.text!, phone: phoneTextField.text!)
                 Database.createUser(user: userModel)
             }
         }
