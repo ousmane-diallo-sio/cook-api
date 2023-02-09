@@ -14,8 +14,8 @@ class EditProfileViewController: UIViewController {
     @IBOutlet weak var usernameLabel: UILabel!
     
     @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var lastnameTextField: UITextField!
     @IBOutlet weak var firstnameTextField: UITextField!
+    @IBOutlet weak var lastnameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
 
@@ -29,8 +29,8 @@ class EditProfileViewController: UIViewController {
             self.user = await Database.getUser(email: (Authentication.getCurrentUser()?.email)!)
             self.usernameLabel.text = "\(user?.firstname ?? "") \(user?.lastname ?? "")"
             self.usernameTextField.text = user?.username
-            self.lastnameTextField.text = user?.lastname
             self.firstnameTextField.text = user?.firstname
+            self.lastnameTextField.text = user?.lastname
             self.emailTextField.text = user?.email
             self.phoneTextField.text = user?.phone
         }
