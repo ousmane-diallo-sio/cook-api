@@ -51,7 +51,7 @@ class RecipeView: UIView {
         labelUsername.text = recipe.author.username
         for i in 0 ..< vRatingContainer.subviews.count {
             if (recipe.rating.rawValue > i) {
-                (vRatingContainer.subviews[i] as UIView).tintColor = UIColor.yellow
+                (vRatingContainer.subviews[i] as UIView).tintColor = UIColor.systemYellow
             }
         }
         

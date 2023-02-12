@@ -8,5 +8,11 @@
 import Foundation
 
 class IngredientModel {
+    let name: String
+    let amount: String
     
+    init(name: String, amount: String) {
+        self.name = name
+        self.amount = amount
+    }
 }

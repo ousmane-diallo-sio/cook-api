@@ -8,5 +8,11 @@
 import Foundation
 
 class RecipeStepModel {
+    let description: String
+    let duration: Int // in minutes
     
+    init(description: String, duration: Int) {
+        self.description = description
+        self.duration = duration
+    }
 }

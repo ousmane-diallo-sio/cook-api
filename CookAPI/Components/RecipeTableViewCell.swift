@@ -36,7 +36,12 @@ class RecipeTableViewCell: UITableViewCell {
     
     
     @IBAction func seeFullRecipe(_ sender: Any) {
-        RecipeModel.currentRecipe = self.recipe
-        FeedViewController.navigationController?.pushViewController(FullRecipeViewController(), animated: true)
+        if (recipe == nil) {
+            return
+        }
+        FeedViewController.navigationController?.pushViewController(
+            FullRecipeViewController.newInstance(recipeModel: self.recipe!),
+            animated: true
+        )
     }
 }
