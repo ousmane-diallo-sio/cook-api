@@ -38,7 +38,6 @@ class FullRecipeViewController: UIViewController {
         recipeView.updateData(recipe: recipeM)
         recipeView.labelDesc.numberOfLines = 10
         recipeView.labelDesc.lineBreakMode = .byWordWrapping
-        print(recipeView.labelDesc.text)
         initSubviews()
         // These views are here only to enable the app to create similar instances of these, this is why they are hidden
         lblIngredient0.isHidden = true

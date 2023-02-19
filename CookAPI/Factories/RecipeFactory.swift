@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 class RecipeFactory {
     
     static func recipe(from dict: [String: Any]) -> RecipeModel? {
+        print(dict)
         guard let img = dict["img"] as? String,
               let title = dict["title"] as? String,
               let desc = dict["desc"] as? String,
@@ -19,6 +21,7 @@ class RecipeFactory {
             print("Error -> RecipeFactory::recipe()")
             return nil
         }
+
         let recipe = RecipeModel(
             author: UserModel(
                 username: "my_username",
@@ -33,9 +36,7 @@ class RecipeFactory {
             imgUrl: img,
             title: title,
             desc: desc,
-            ingredients: [
-            
-            ],
+            ingredients: [],
             category: category,
             dish: dish,
             steps: [
@@ -45,6 +46,10 @@ class RecipeFactory {
         )
         
         return recipe
+    }
+    
+    class func ingredients(ingredientsRef: DocumentReference) -> [IngredientModel]? {
+        return nil
     }
     
 }
