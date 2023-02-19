@@ -11,7 +11,7 @@ import FirebaseAuth
 class Authentication {
     static let auth: Auth = Auth.auth()
     
-    class func signIn(email: String, password: String) {
+    class func signIn(email: String, password: String) async {
         auth.signIn(withEmail: email, password: password) { authResult, error in
             if error != nil {
                 print(error!.localizedDescription)

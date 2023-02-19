@@ -50,7 +50,36 @@ class EditProfileViewController: UIViewController {
             user!.phone = self.phoneTextField.text ?? ""
             await Database.editProfile(user:user!)
             self.usernameLabel.text = "\(user?.firstname ?? "") \(user?.lastname ?? "")"
+            showToast(message: "Le profil a bien été mis à jour")
         }
 
     }
+    
+    @IBAction func handleLogout(_ sender: Any) {
+        Authentication.signOut()
+        if Authentication.getCurrentUser() == nil {
+            self.navigationController?.setViewControllers([AuthenticationViewController()], animated: true)
+        }
+    }
+    
+}
+
+extension UIViewController {
+
+    func showToast(message : String) {
+        print(self.view.frame.size.width)
+        let toastLabel = UILabel(frame: CGRect(x: 0, y: self.view.frame.size.height-50, width: self.view.frame.size.width, height: 30))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.textAlignment = .center;
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        self.view.addSubview(toastLabel)
+        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
+             toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
+    }
+    
 }

@@ -73,6 +73,14 @@
                         <action selector="handleSubmission:" destination="-1" eventType="touchUpInside" id="k9Q-wV-G1p"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSX-Qe-ASs">
+                    <rect key="frame" x="124" y="787" width="145" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Se déconnecter"/>
+                    <connections>
+                        <action selector="handleLogout:" destination="-1" eventType="touchUpInside" id="F3K-sl-bFw"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -86,7 +94,9 @@
                 <constraint firstItem="IOY-J8-h2b" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="9di-rv-UxC"/>
                 <constraint firstItem="IOY-J8-h2b" firstAttribute="top" secondItem="431-GE-C72" secondAttribute="bottom" constant="25" id="DdI-zG-CVN"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IOY-J8-h2b" secondAttribute="trailing" constant="25" id="Fal-H9-Ikt"/>
+                <constraint firstItem="TSX-Qe-ASs" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Ilf-7w-5dG"/>
                 <constraint firstItem="fvh-oM-MRS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="JCQ-JU-ZD8"/>
+                <constraint firstAttribute="bottom" secondItem="TSX-Qe-ASs" secondAttribute="bottom" constant="30" id="JUf-0S-i92"/>
                 <constraint firstItem="UQE-Ve-9lm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="PXt-lW-Wu4"/>
                 <constraint firstItem="8Qx-PR-0Sf" firstAttribute="top" secondItem="VdE-Kn-RJW" secondAttribute="bottom" constant="30" id="Xwo-bi-in0"/>
                 <constraint firstItem="hdm-bH-WLc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="ZgN-vN-Vya"/>
