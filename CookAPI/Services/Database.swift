@@ -37,5 +37,23 @@ class Database {
             }
         }
     }
+    
+    class func getFeedRecipes(callback: @escaping ([RecipeModel]?, Error?) -> Void) {
+        Database.db.collection("recipe").getDocuments { querySnapshot, err in
+            if (err != nil) {
+                print("Error -> Database.getFeedRecipes() : \(err!)")
+                callback(nil, err)
+                return
+            }
+            var arrayRecipes: [RecipeModel] = []
+            querySnapshot?.documents.forEach { document in
+                let recipe = RecipeFactory.recipe(from: document.data())
+                if (recipe != nil) {
+                    arrayRecipes.append(recipe!)
+                }
+            }
+            callback(arrayRecipes, nil)
+        }
+    }
 
 }
