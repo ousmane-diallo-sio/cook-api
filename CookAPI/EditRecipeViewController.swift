@@ -10,37 +10,46 @@ import UIKit
 class EditRecipeViewController: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     @IBOutlet weak var ImageVueUpload: UIImageView!
-    var alertController: UIAlertController?
     
     @IBOutlet weak var ChooseImageButton: UIButton!
-    var pickerController: UIImagePickerController?
     
-    @IBAction func ChooseImageButton(sender: UIButton) {
-        alertController = UIAlertController(title: "take image", message: "choose image source", preferredStyle: .actionSheet)
-        let cameraAction = UIAlertAction(title: "camera", style: .default){ (action) in
-            print("you choose camera")
-        }
+    @IBAction func ChooseImageButton(_ sender: Any) {
         
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        
+        let actionSheet = UIAlertController(title: "Source photo", message: "choississer une source", preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: "camera", style: .default, handler: {(action:UIAlertAction) in imagePickerController.sourceType = .camera
+            self.present(imagePickerController,animated: true, completion: nil)
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "galerie photo", style: .default, handler: {(action:UIAlertAction)in imagePickerController.sourceType = .photoLibrary
+            self.present(imagePickerController,animated: true, completion: nil)
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "annuler", style: .cancel, handler: nil))
+        
+        self.present(actionSheet, animated: true,completion: nil)
     }
     
-    func imageSelect(){
-        pickerController = UIImagePickerController()
-        if(UIImagePickerController.isSourceTypeAvailable(.camera)==false){
-        return
-    }
-        pickerController?.delegate = self;
-        pickerController?.allowsEditing = true;
-        pickerController?.sourceType = .camera
-        self.present(pickerController!,animated: true){
-            print("presented camera")
-        }
-    
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        
+        ImageVueUpload.image = image
+        
+        picker.dismiss(animated: true,completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true,completion: nil)
     }
 
 
