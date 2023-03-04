@@ -13,6 +13,17 @@ class EditRecipeViewController: UIViewController , UIImagePickerControllerDelega
     
     @IBOutlet weak var ChooseImageButton: UIButton!
     
+    @IBOutlet weak var ListDropDown: UIButton!
+    
+    
+    @IBOutlet weak var TableViewDropDown: UITableView!
+    
+    
+    @IBAction func OnClickDropButton(_ sender: Any) {
+    }
+    
+    var listQte = ["Unité","Litre","Gramme"]
+    
     
     
     @IBAction func ChooseImageButton(_ sender: Any) {
@@ -65,4 +76,16 @@ class EditRecipeViewController: UIViewController , UIImagePickerControllerDelega
     }
     */
 
+}
+
+
+extension EditRecipeViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)-> Int{
+        return listQte.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: IndexPath)
+        cell.textLabel?.text = listQte[IndexPath.row]
+    }
 }
