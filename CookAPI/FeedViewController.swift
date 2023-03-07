@@ -15,6 +15,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var recipeTableView: UITableView!
     
+    let refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.recipeTableView.dataSource = self
@@ -24,16 +26,10 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             forCellReuseIdentifier: "RecipeCellId"
         )
         FeedViewController.navigationController = self.navigationController
+        self.getFeedRecipes()
         // Do any additional setup after loading the view.
-        Database.getFeedRecipes { recipes, error in
-            guard let err = error else {
-                guard let recipes = recipes else { return }
-                self.recipes = recipes
-                self.recipeTableView.reloadData()
-                return
-            }
-            print("Error: (Could not load feed) \(err)")
-        }
+        self.refreshControl.addTarget(self, action: #selector(self.refreshPage), for: .valueChanged)
+        self.recipeTableView.addSubview(self.refreshControl)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,6 +52,23 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 10
+    }
+    
+    func getFeedRecipes() {
+        Database.getFeedRecipes { recipes, error in
+            guard let err = error else {
+                guard let recipes = recipes else { return }
+                self.recipes = recipes
+                self.recipeTableView.reloadData()
+                self.refreshControl.endRefreshing()
+                return
+            }
+            print("Error: (Could not load feed) \(err)")
+        }
+    }
+    
+    @objc func refreshPage() {
+        self.getFeedRecipes()
     }
 
     /*

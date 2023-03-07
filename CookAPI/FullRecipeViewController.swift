@@ -16,8 +16,8 @@ class FullRecipeViewController: UIViewController {
     @IBOutlet weak var lblIngredient0: UILabel!
     @IBOutlet weak var lblTitleStep0: UILabel!
     @IBOutlet weak var lblStep0: UILabel!
-    @IBOutlet weak var stepsContainer: UIView!
     @IBOutlet weak var ingredientsContainer: UIStackView!
+    @IBOutlet weak var stepsContainer: UIStackView!
     
     var recipeModel: RecipeModel?
     var currentRating: RatingModel.RawValue = 1
@@ -44,9 +44,9 @@ class FullRecipeViewController: UIViewController {
         lblTitleStep0.isHidden = true
         lblStep0.isHidden = true
         
-        scrollView.contentSize = CGSizeMake(
-            scrollView.frame.size.width,
-            vContainer.frame.size.height
+        scrollView.contentSize = CGSize(
+            width: scrollView.frame.size.width,
+            height: vContainer.subviews.reduce(0) { max($0, $1.frame.maxY) }
         )
     }
 
@@ -70,12 +70,18 @@ class FullRecipeViewController: UIViewController {
         var stepNum = 1
         self.recipeModel?.steps.forEach{ step in
             let lblTitle: UILabel = UILabel()
+            lblTitle.textColor = lblTitleStep0.textColor
+            lblTitle.font = lblTitleStep0.font
+            lblTitle.frame = lblTitleStep0.frame
             lblTitle.text = "Etape \(stepNum) (\(step.duration) min)"
             stepsContainer.addSubview(lblTitle)
             stepNum += 1
             
             let lbl: UILabel = UILabel()
-            lbl.text = "\(step.description)"
+            lbl.textColor = lblStep0.textColor
+            lbl.font = lblStep0.font
+            lbl.frame = lblStep0.frame
+            lbl.text = " • \(step.description)"
             stepsContainer.addSubview(lbl)
         }
     }

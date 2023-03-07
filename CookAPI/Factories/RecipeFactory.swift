@@ -17,6 +17,8 @@ class RecipeFactory {
               let desc = dict["desc"] as? String,
               let category = dict["category"] as? String,
               let rating = dict["rating"] as? Int,
+              let ingredients = dict["ingredients"] as? [[String: String]],
+              let steps = dict["steps"] as? [[String: Any]],
               let dish = dict["dish"] as? String else {
             print("Error -> RecipeFactory::recipe()")
             return nil
@@ -36,20 +38,44 @@ class RecipeFactory {
             imgUrl: img,
             title: title,
             desc: desc,
-            ingredients: [],
+            ingredients: RecipeFactory.ingredients(data: ingredients) ?? [],
             category: category,
             dish: dish,
-            steps: [
-            
-            ],
+            steps: RecipeFactory.steps(data: steps) ?? [],
             rating: RatingModel(rawValue: rating) ?? RatingModel.one
         )
         
         return recipe
     }
     
-    class func ingredients(ingredientsRef: DocumentReference) -> [IngredientModel]? {
-        return nil
+    class func ingredient(ingredient: Dictionary<String, String>) -> IngredientModel? {
+        
+        guard let name = ingredient["name"],
+              let amout = ingredient["amount"] else {
+            return nil
+        }
+        return IngredientModel(name: name, amount: amout)
+    }
+    
+    class func ingredients(data: [[String: String]]) -> [IngredientModel]? {
+        data.compactMap{dict in
+            return RecipeFactory.ingredient(ingredient: dict)
+        }
+    }
+    
+    class func step(step: Dictionary<String, Any>) -> RecipeStepModel? {
+        
+        guard let description = step["description"],
+              let duration = step["duration"] else {
+            return nil
+        }
+        return RecipeStepModel(description: description as! String, duration: duration as! Int)
+    }
+    
+    class func steps(data: [[String: Any]]) -> [RecipeStepModel]? {
+        data.compactMap{dict in
+            return RecipeFactory.step(step: dict)
+        }
     }
     
 }
