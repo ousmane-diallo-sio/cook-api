@@ -31,8 +31,9 @@ class AuthenticationViewController: UIViewController {
         Task {
             await Authentication.signIn(email: self.mailTextField.text ?? "", password: self.passwordTextField.text ?? "")
         }
-         
-        showToast(message: "Identifiants incorrects")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.showToast(message: "Identifiants incorrects")
+        }  
     }
     
     @IBAction func handleRegistration(_ sender: UIButton) {
