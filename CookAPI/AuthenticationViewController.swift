@@ -25,6 +25,7 @@ class AuthenticationViewController: UIViewController {
         self.title = "Connexion"
         self.mailErrorLabel.text = nil
         self.passwordErrorLabel.text = nil
+        self.passwordTextField.isSecureTextEntry = true
     }
     
     @IBAction func handleLogin(_ sender: UIButton) {
