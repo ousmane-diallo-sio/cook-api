@@ -21,6 +21,8 @@
 		7D4222DD29789C6400D148F1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4222DC29789C6400D148F1 /* User.swift */; };
 		7D4222E029789CEF00D148F1 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4222DF29789CEF00D148F1 /* Recipe.swift */; };
 		7D4222E62978AED900D148F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D4222E52978AED900D148F1 /* GoogleService-Info.plist */; };
+		7D6089BF29B87BCF0068AD28 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6089BD29B87BCF0068AD28 /* AboutViewController.swift */; };
+		7D6089C029B87BCF0068AD28 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D6089BE29B87BCF0068AD28 /* AboutViewController.xib */; };
 		7DF1226329945ABC002C7FF3 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF1226129945ABC002C7FF3 /* EditProfileViewController.swift */; };
 		7DF1226429945ABC002C7FF3 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DF1226229945ABC002C7FF3 /* EditProfileViewController.xib */; };
 		CD363DEF2991157800C0D025 /* RecipeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD363DEE2991157800C0D025 /* RecipeView.xib */; };
@@ -60,6 +62,8 @@
 		7D4222DC29789C6400D148F1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7D4222DF29789CEF00D148F1 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		7D4222E52978AED900D148F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7D6089BD29B87BCF0068AD28 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		7D6089BE29B87BCF0068AD28 /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		7DF1226129945ABC002C7FF3 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		7DF1226229945ABC002C7FF3 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		CD363DEE2991157800C0D025 /* RecipeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeView.xib; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 				E4EF2E7C29B7DCC7005D83C0 /* StepTableViewCell.xib */,
 				E41FE2AE29B7F282007FD7D9 /* IngredientTableViewCell.swift */,
 				E41FE2AF29B7F282007FD7D9 /* IngredientTableViewCell.xib */,
+				E41FE2B229B7F72F007FD7D9 /* Ingredient.swift */,
 				CDFD3A5C2993B10100CF066D /* FullRecipeViewController.swift */,
 				CDFD3A5D2993B10100CF066D /* FullRecipeViewController.xib */,
 				CD71A350295670440094D0ED /* Assets.xcassets */,
@@ -199,6 +204,8 @@
 				7D2A2CFD297365C800F3758F /* RegistrationViewController.xib */,
 				7DF1226129945ABC002C7FF3 /* EditProfileViewController.swift */,
 				7DF1226229945ABC002C7FF3 /* EditProfileViewController.xib */,
+				7D6089BD29B87BCF0068AD28 /* AboutViewController.swift */,
+				7D6089BE29B87BCF0068AD28 /* AboutViewController.xib */,
 			);
 			path = CookAPI;
 			sourceTree = "<group>";
@@ -283,6 +290,7 @@
 				CD71A354295670440094D0ED /* LaunchScreen.storyboard in Resources */,
 				CD4BD9E12971CB08001371CA /* FeedViewController.xib in Resources */,
 				CD4BD9EE2971CDFB001371CA /* RecipeTableViewCell.xib in Resources */,
+				7D6089C029B87BCF0068AD28 /* AboutViewController.xib in Resources */,
 				CD71A351295670440094D0ED /* Assets.xcassets in Resources */,
 				7D4222E62978AED900D148F1 /* GoogleService-Info.plist in Resources */,
 			);
@@ -317,6 +325,7 @@
 				CD3715D7298E8447000792C6 /* RecipeView.swift in Sources */,
 				7D4222E029789CEF00D148F1 /* Recipe.swift in Sources */,
 				7DF1226329945ABC002C7FF3 /* EditProfileViewController.swift in Sources */,
+				7D6089BF29B87BCF0068AD28 /* AboutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
