@@ -16,7 +16,7 @@ class IngredientTableViewCell: UITableViewCell {
     
     @IBOutlet weak var ButtonSupp: UIButton!
     
-    func redraw(with ingredient: Ingredient){
+    func redraw(with ingredient: IngredientTmp){
         self.IngredientLabel.text = ingredient.title
         self.QuantiteLabel.text = "\(ingredient.quantite)"
         self.UniteLabel.text = "\(ingredient.unite)"

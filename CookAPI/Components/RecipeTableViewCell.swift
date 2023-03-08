@@ -39,9 +39,16 @@ class RecipeTableViewCell: UITableViewCell {
         if (recipe == nil) {
             return
         }
-        FeedViewController.navigationController?.pushViewController(
-            FullRecipeViewController.newInstance(recipeModel: self.recipe!),
-            animated: true
-        )
+        
+        if FeedViewController.navigationController != nil {
+            FeedViewController.navigationController?.pushViewController(
+                FullRecipeViewController.newInstance(recipeModel: self.recipe!),
+                animated: true
+            )
+        } else if FeedViewController.splitViewController != nil {
+            let fullRecipeViewController = FullRecipeViewController.newInstance(recipeModel: recipe!)
+            FeedViewController.splitViewController?.viewControllers.insert(fullRecipeViewController, at: 1)
+        }
+        
     }
 }
