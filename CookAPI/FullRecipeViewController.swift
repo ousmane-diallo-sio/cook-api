@@ -119,6 +119,10 @@ class FullRecipeViewController: UIViewController {
             })
             (self.ratingContainer.subviews[i] as! UIButton).setBackgroundImage(starFill, for: .normal)
             (self.ratingContainer.subviews[i] as! UIButton).tintColor = starColor
+            Task {
+                await Database.editRecipeRating(recipe: recipeModel!, newRating: currentRating);
+                print("Notation mise à jour")
+            }
         }
         
         let starEmpty = UIImage(systemName: "star")
