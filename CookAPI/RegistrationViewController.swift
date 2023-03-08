@@ -24,7 +24,8 @@ class RegistrationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Inscription"
-        // Do any additional setup after loading the view.
+        self.passwordTextField.isSecureTextEntry = true
+        self.passwordConfirmationTextField.isSecureTextEntry = true
     }
     
     @IBAction func handleRegistration(_ sender: Any) {

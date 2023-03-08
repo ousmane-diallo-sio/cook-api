@@ -63,8 +63,8 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hU-0y-jf8">
-                    <rect key="frame" x="20" y="687" width="353" height="51"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hU-0y-jf8">
+                    <rect key="frame" x="20" y="703.66666666666663" width="353" height="34.333333333333371"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Valider les modifications">
                         <color key="baseBackgroundColor" red="0.45490196350000001" green="0.80392158030000005" blue="0.52941179279999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -74,7 +74,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSX-Qe-ASs">
-                    <rect key="frame" x="124" y="787" width="145" height="35"/>
+                    <rect key="frame" x="124" y="768" width="145" height="35"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Se déconnecter"/>
                     <connections>
@@ -85,6 +85,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="TSX-Qe-ASs" firstAttribute="top" secondItem="2hU-0y-jf8" secondAttribute="bottom" constant="30" id="1Yu-L1-Sa7"/>
                 <constraint firstItem="8Qx-PR-0Sf" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="27v-aF-GWI"/>
                 <constraint firstItem="hdm-bH-WLc" firstAttribute="top" secondItem="8Qx-PR-0Sf" secondAttribute="bottom" constant="60" id="399-rV-Zob"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hdm-bH-WLc" secondAttribute="trailing" constant="25" id="3fG-oI-0Os"/>
@@ -96,7 +97,6 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IOY-J8-h2b" secondAttribute="trailing" constant="25" id="Fal-H9-Ikt"/>
                 <constraint firstItem="TSX-Qe-ASs" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Ilf-7w-5dG"/>
                 <constraint firstItem="fvh-oM-MRS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="JCQ-JU-ZD8"/>
-                <constraint firstAttribute="bottom" secondItem="TSX-Qe-ASs" secondAttribute="bottom" constant="30" id="JUf-0S-i92"/>
                 <constraint firstItem="UQE-Ve-9lm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="PXt-lW-Wu4"/>
                 <constraint firstItem="8Qx-PR-0Sf" firstAttribute="top" secondItem="VdE-Kn-RJW" secondAttribute="bottom" constant="30" id="Xwo-bi-in0"/>
                 <constraint firstItem="hdm-bH-WLc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="ZgN-vN-Vya"/>
