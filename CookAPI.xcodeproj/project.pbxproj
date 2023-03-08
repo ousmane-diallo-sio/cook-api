@@ -12,6 +12,11 @@
 		CD71A354295670440094D0ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD71A352295670440094D0ED /* LaunchScreen.storyboard */; };
 		E411A89E29953921005BBAE1 /* EditRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E411A89C29953921005BBAE1 /* EditRecipeViewController.swift */; };
 		E411A89F29953921005BBAE1 /* EditRecipeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E411A89D29953921005BBAE1 /* EditRecipeViewController.xib */; };
+		E41FE2B029B7F282007FD7D9 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41FE2AE29B7F282007FD7D9 /* IngredientTableViewCell.swift */; };
+		E41FE2B129B7F282007FD7D9 /* IngredientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E41FE2AF29B7F282007FD7D9 /* IngredientTableViewCell.xib */; };
+		E41FE2B329B7F72F007FD7D9 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41FE2B229B7F72F007FD7D9 /* Ingredient.swift */; };
+		E4EF2E7D29B7DCC7005D83C0 /* StepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EF2E7B29B7DCC7005D83C0 /* StepTableViewCell.swift */; };
+		E4EF2E7E29B7DCC7005D83C0 /* StepTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4EF2E7C29B7DCC7005D83C0 /* StepTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		CD71A355295670440094D0ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E411A89C29953921005BBAE1 /* EditRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRecipeViewController.swift; sourceTree = "<group>"; };
 		E411A89D29953921005BBAE1 /* EditRecipeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditRecipeViewController.xib; sourceTree = "<group>"; };
+		E41FE2AE29B7F282007FD7D9 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IngredientTableViewCell.swift; path = ../IngredientTableViewCell.swift; sourceTree = "<group>"; };
+		E41FE2AF29B7F282007FD7D9 /* IngredientTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = IngredientTableViewCell.xib; path = ../IngredientTableViewCell.xib; sourceTree = "<group>"; };
+		E41FE2B229B7F72F007FD7D9 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		E4EF2E7B29B7DCC7005D83C0 /* StepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StepTableViewCell.swift; path = ../StepTableViewCell.swift; sourceTree = "<group>"; };
+		E4EF2E7C29B7DCC7005D83C0 /* StepTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = StepTableViewCell.xib; path = ../StepTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,11 @@
 				CD71A355295670440094D0ED /* Info.plist */,
 				E411A89C29953921005BBAE1 /* EditRecipeViewController.swift */,
 				E411A89D29953921005BBAE1 /* EditRecipeViewController.xib */,
+				E4EF2E7B29B7DCC7005D83C0 /* StepTableViewCell.swift */,
+				E4EF2E7C29B7DCC7005D83C0 /* StepTableViewCell.xib */,
+				E41FE2AE29B7F282007FD7D9 /* IngredientTableViewCell.swift */,
+				E41FE2AF29B7F282007FD7D9 /* IngredientTableViewCell.xib */,
+				E41FE2B229B7F72F007FD7D9 /* Ingredient.swift */,
 			);
 			path = CookAPI;
 			sourceTree = "<group>";
@@ -122,7 +137,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E41FE2B129B7F282007FD7D9 /* IngredientTableViewCell.xib in Resources */,
 				CD71A354295670440094D0ED /* LaunchScreen.storyboard in Resources */,
+				E4EF2E7E29B7DCC7005D83C0 /* StepTableViewCell.xib in Resources */,
 				CD71A351295670440094D0ED /* Assets.xcassets in Resources */,
 				E411A89F29953921005BBAE1 /* EditRecipeViewController.xib in Resources */,
 			);
@@ -135,6 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E41FE2B029B7F282007FD7D9 /* IngredientTableViewCell.swift in Sources */,
+				E4EF2E7D29B7DCC7005D83C0 /* StepTableViewCell.swift in Sources */,
+				E41FE2B329B7F72F007FD7D9 /* Ingredient.swift in Sources */,
 				E411A89E29953921005BBAE1 /* EditRecipeViewController.swift in Sources */,
 				CD71A348295670430094D0ED /* AppDelegate.swift in Sources */,
 			);
