@@ -19,6 +19,7 @@ class UserModel {
     var followers: [UserModel]
     
     init(username: String, firstname: String, lastname: String, email: String, phone: String, picture: String = "", favRecipes: [Recipe] = [], follows: [UserModel] = [], followers: [UserModel] = []) {
+
         self.username = username
         self.firstname = firstname
         self.lastname = lastname

@@ -44,7 +44,7 @@ class AuthenticationViewController: UIViewController {
      override func viewWillAppear(_ animated: Bool) {
          handle = Auth.auth().addStateDidChangeListener { auth, user in
              if user != nil {
-                 self.navigationController?.setViewControllers([EditProfileViewController()], animated: true)
+                 self.navigationController?.setViewControllers([FeedViewController()], animated: true)
              }
          }
      }
