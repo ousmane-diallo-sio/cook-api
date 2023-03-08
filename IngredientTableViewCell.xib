@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="57" id="KGk-i7-Jjw" customClass="IngredientTableViewCell" customModule="CookAPI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="352" height="57"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="352" height="57"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ay-tM-Din">
+                        <rect key="frame" x="0.0" y="0.0" width="352" height="34.333333333333336"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IngredientLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jl2-L7-qhA">
+                                <rect key="frame" x="0.0" y="0.0" width="170" height="34.333333333333336"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="jIb-qa-4Fn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantitelabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOr-Vm-KwX">
+                                <rect key="frame" x="170" y="0.0" width="40" height="34.333333333333336"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="elp-oL-N4x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UniteLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U64-Gl-pXW">
+                                <rect key="frame" x="210" y="0.0" width="60" height="34.333333333333336"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="lEP-eF-Yty"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gb-nj-6dW">
+                                <rect key="frame" x="270" y="0.0" width="82" height="34.333333333333336"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="effacer"/>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3Ay-tM-Din" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="SdA-qb-z5Z"/>
+                    <constraint firstAttribute="trailing" secondItem="3Ay-tM-Din" secondAttribute="trailing" id="p25-5F-mrU"/>
+                    <constraint firstItem="3Ay-tM-Din" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="r0X-Yd-eaM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="ButtonSupp" destination="2gb-nj-6dW" id="ciH-dr-ZsV"/>
+                <outlet property="IngredientLabel" destination="jl2-L7-qhA" id="QRW-hR-tTd"/>
+                <outlet property="QuantiteLabel" destination="eOr-Vm-KwX" id="UrQ-Fl-3xz"/>
+                <outlet property="UniteLabel" destination="U64-Gl-pXW" id="ghx-5x-9kD"/>
+            </connections>
+            <point key="canvasLocation" x="80.916030534351137" y="24.295774647887324"/>
+        </tableViewCell>
+    </objects>
+</document>

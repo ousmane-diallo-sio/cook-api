@@ -10,14 +10,14 @@ import Foundation
 class RecipeModel {
     
     let author: UserModel
-    var imgUrl: String
+    let imgUrl: String
     let title: String
-    var desc: String
-    var ingredients: [IngredientModel]
-    var category: String
-    var dish: String
-    var steps: [RecipeStepModel] // Ajouter la classe RecipeStep
-    let rating: RatingModel
+    let desc: String
+    let ingredients: [IngredientModel]
+    let category: String
+    let dish: String
+    let steps: [RecipeStepModel] // Ajouter la classe RecipeStep
+    var rating: RatingModel
 
     init(author: UserModel, imgUrl: String, title: String, desc: String, ingredients: [IngredientModel], category: String, dish: String, steps: [RecipeStepModel], rating: RatingModel) {
         self.author = author
