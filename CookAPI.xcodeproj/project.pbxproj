@@ -46,6 +46,8 @@
 		E411A89F29953921005BBAE1 /* EditRecipeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E411A89D29953921005BBAE1 /* EditRecipeViewController.xib */; };
 		E41FE2B029B7F282007FD7D9 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41FE2AE29B7F282007FD7D9 /* IngredientTableViewCell.swift */; };
 		E41FE2B129B7F282007FD7D9 /* IngredientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E41FE2AF29B7F282007FD7D9 /* IngredientTableViewCell.xib */; };
+		E49777D929B897C300C3B017 /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49777D729B897C300C3B017 /* CourseListViewController.swift */; };
+		E49777DA29B897C300C3B017 /* CourseListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E49777D829B897C300C3B017 /* CourseListViewController.xib */; };
 		E4EF2E7D29B7DCC7005D83C0 /* StepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EF2E7B29B7DCC7005D83C0 /* StepTableViewCell.swift */; };
 		E4EF2E7E29B7DCC7005D83C0 /* StepTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4EF2E7C29B7DCC7005D83C0 /* StepTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -89,6 +91,8 @@
 		E411A89D29953921005BBAE1 /* EditRecipeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditRecipeViewController.xib; sourceTree = "<group>"; };
 		E41FE2AE29B7F282007FD7D9 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IngredientTableViewCell.swift; path = ../IngredientTableViewCell.swift; sourceTree = "<group>"; };
 		E41FE2AF29B7F282007FD7D9 /* IngredientTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = IngredientTableViewCell.xib; path = ../IngredientTableViewCell.xib; sourceTree = "<group>"; };
+		E49777D729B897C300C3B017 /* CourseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewController.swift; sourceTree = "<group>"; };
+		E49777D829B897C300C3B017 /* CourseListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseListViewController.xib; sourceTree = "<group>"; };
 		E4EF2E7B29B7DCC7005D83C0 /* StepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StepTableViewCell.swift; path = ../StepTableViewCell.swift; sourceTree = "<group>"; };
 		E4EF2E7C29B7DCC7005D83C0 /* StepTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = StepTableViewCell.xib; path = ../StepTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,7 +191,6 @@
 				E4EF2E7C29B7DCC7005D83C0 /* StepTableViewCell.xib */,
 				E41FE2AE29B7F282007FD7D9 /* IngredientTableViewCell.swift */,
 				E41FE2AF29B7F282007FD7D9 /* IngredientTableViewCell.xib */,
-				E41FE2B229B7F72F007FD7D9 /* Ingredient.swift */,
 				CDFD3A5C2993B10100CF066D /* FullRecipeViewController.swift */,
 				CDFD3A5D2993B10100CF066D /* FullRecipeViewController.xib */,
 				CD71A350295670440094D0ED /* Assets.xcassets */,
@@ -206,6 +209,8 @@
 				7DF1226229945ABC002C7FF3 /* EditProfileViewController.xib */,
 				7D6089BD29B87BCF0068AD28 /* AboutViewController.swift */,
 				7D6089BE29B87BCF0068AD28 /* AboutViewController.xib */,
+				E49777D729B897C300C3B017 /* CourseListViewController.swift */,
+				E49777D829B897C300C3B017 /* CourseListViewController.xib */,
 			);
 			path = CookAPI;
 			sourceTree = "<group>";
@@ -293,6 +298,7 @@
 				7D6089C029B87BCF0068AD28 /* AboutViewController.xib in Resources */,
 				CD71A351295670440094D0ED /* Assets.xcassets in Resources */,
 				7D4222E62978AED900D148F1 /* GoogleService-Info.plist in Resources */,
+				E49777DA29B897C300C3B017 /* CourseListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +314,7 @@
 				E4EF2E7D29B7DCC7005D83C0 /* StepTableViewCell.swift in Sources */,
 				E411A89E29953921005BBAE1 /* EditRecipeViewController.swift in Sources */,
 				CD55051029870FB900F19624 /* ImageFactory.swift in Sources */,
+				E49777D929B897C300C3B017 /* CourseListViewController.swift in Sources */,
 				CD5505082987085C00F19624 /* Rating.swift in Sources */,
 				CD55050A298708B700F19624 /* Ingredient.swift in Sources */,
 				CDBD23A429991D0F004B3FD9 /* RecipeFactory.swift in Sources */,
