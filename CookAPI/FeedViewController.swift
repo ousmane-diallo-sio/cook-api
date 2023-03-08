@@ -10,12 +10,19 @@ import UIKit
 class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     static var navigationController: UINavigationController?
+    
+    static var splitViewController: UISplitViewController?
 
     var recipes: [RecipeModel]?
     
     @IBOutlet weak var recipeTableView: UITableView!
     
     let refreshControl = UIRefreshControl()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        FeedViewController.splitViewController = self.splitViewController
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

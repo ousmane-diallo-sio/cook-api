@@ -30,6 +30,7 @@ class RecipeFactory {
                 firstname: "Prenom",
                 lastname: "nom",
                 email: "email",
+                phone: "0123456789",
                 picture: "https://torange.biz/photofxnew/1/IMAGE/clear-sky-1049.jpg",
                 favRecipes: [],
                 follows: [],
@@ -42,7 +43,8 @@ class RecipeFactory {
             category: category,
             dish: dish,
             steps: RecipeFactory.steps(data: steps) ?? [],
-            rating: RatingModel(rawValue: rating) ?? RatingModel.one
+            rating: RatingModel(rawValue: rating) ?? RatingModel.one,
+            ratings: []
         )
         
         return recipe
