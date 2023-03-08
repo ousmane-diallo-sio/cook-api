@@ -10,7 +10,7 @@ import UIKit
 class FullRecipeViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var vContainer: UIView!
+    @IBOutlet weak var vContainer: UIStackView!
     @IBOutlet weak var ratingContainer: UIView!
     @IBOutlet weak var recipeView: RecipeView!
     @IBOutlet weak var lblIngredient0: UILabel!
@@ -21,6 +21,7 @@ class FullRecipeViewController: UIViewController {
     
     var recipeModel: RecipeModel?
     var currentRating: RatingModel.RawValue = 1
+
     
     static func newInstance(recipeModel: RecipeModel) -> FullRecipeViewController {
         let instance = FullRecipeViewController()
@@ -48,6 +49,18 @@ class FullRecipeViewController: UIViewController {
             width: scrollView.frame.size.width,
             height: vContainer.subviews.reduce(0) { max($0, $1.frame.maxY) }
         )
+        let topConstraint = NSLayoutConstraint(item: ingredientsContainer, attribute: .top, relatedBy: .equal, toItem: vContainer, attribute: .top, multiplier: 1, constant: (recipeView.superview?.frame.size.height)!)
+        ingredientsContainer.superview?.addConstraint(topConstraint)
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        var totalHeight: CGFloat = 0
+        for view in scrollView.subviews {
+            totalHeight += view.frame.height
+        }
+//        scrollView.contentSize = CGSize(width: view.frame.width, height: totalHeight)
     }
 
     func initSubviews() {
@@ -64,7 +77,7 @@ class FullRecipeViewController: UIViewController {
             lbl.textColor = lblIngredient0.textColor
             lbl.font = lblIngredient0.font
             lbl.frame = lblIngredient0.frame
-            lbl.text = " • \(ingredient.name) : \(ingredient.amount)"
+            lbl.text = "  • \(ingredient.name) : \(ingredient.amount)"
             ingredientsContainer.addArrangedSubview(lbl)
         }
         var stepNum = 1
@@ -73,16 +86,21 @@ class FullRecipeViewController: UIViewController {
             lblTitle.textColor = lblTitleStep0.textColor
             lblTitle.font = lblTitleStep0.font
             lblTitle.frame = lblTitleStep0.frame
-            lblTitle.text = "Etape \(stepNum) (\(step.duration) min)"
-            stepsContainer.addSubview(lblTitle)
+            lblTitle.text = " Etape \(stepNum) (\(step.duration) min)"
+            stepsContainer.addArrangedSubview(lblTitle)
             stepNum += 1
             
             let lbl: UILabel = UILabel()
             lbl.textColor = lblStep0.textColor
             lbl.font = lblStep0.font
             lbl.frame = lblStep0.frame
-            lbl.text = " • \(step.description)"
-            stepsContainer.addSubview(lbl)
+            lbl.text = "  • \(step.description)"
+            
+            stepsContainer.addArrangedSubview(lbl)
+        }
+        var totalHeight: CGFloat = 0
+        for subview in vContainer.subviews {
+            totalHeight += subview.frame.height
         }
     }
     
