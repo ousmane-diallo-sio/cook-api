@@ -43,7 +43,8 @@ class RecipeFactory {
             category: category,
             dish: dish,
             steps: RecipeFactory.steps(data: steps) ?? [],
-            rating: RatingModel(rawValue: rating) ?? RatingModel.one
+            rating: RatingModel(rawValue: rating) ?? RatingModel.one,
+            ratings: []
         )
         
         return recipe
