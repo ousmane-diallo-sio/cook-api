@@ -38,6 +38,7 @@
 		CD71A348295670430094D0ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD71A347295670430094D0ED /* AppDelegate.swift */; };
 		CD71A351295670440094D0ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD71A350295670440094D0ED /* Assets.xcassets */; };
 		CD71A354295670440094D0ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD71A352295670440094D0ED /* LaunchScreen.storyboard */; };
+		CD8861A129B879BE0022869D /* ingredientTmp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8861A029B879BE0022869D /* ingredientTmp.swift */; };
 		CDBD23A429991D0F004B3FD9 /* RecipeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBD23A329991D0F004B3FD9 /* RecipeFactory.swift */; };
 		CDFD3A5E2993B10100CF066D /* FullRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFD3A5C2993B10100CF066D /* FullRecipeViewController.swift */; };
 		CDFD3A5F2993B10100CF066D /* FullRecipeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDFD3A5D2993B10100CF066D /* FullRecipeViewController.xib */; };
@@ -45,7 +46,6 @@
 		E411A89F29953921005BBAE1 /* EditRecipeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E411A89D29953921005BBAE1 /* EditRecipeViewController.xib */; };
 		E41FE2B029B7F282007FD7D9 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41FE2AE29B7F282007FD7D9 /* IngredientTableViewCell.swift */; };
 		E41FE2B129B7F282007FD7D9 /* IngredientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E41FE2AF29B7F282007FD7D9 /* IngredientTableViewCell.xib */; };
-		E41FE2B329B7F72F007FD7D9 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41FE2B229B7F72F007FD7D9 /* Ingredient.swift */; };
 		E4EF2E7D29B7DCC7005D83C0 /* StepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EF2E7B29B7DCC7005D83C0 /* StepTableViewCell.swift */; };
 		E4EF2E7E29B7DCC7005D83C0 /* StepTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4EF2E7C29B7DCC7005D83C0 /* StepTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -81,6 +81,7 @@
 		CD71A350295670440094D0ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD71A353295670440094D0ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD71A355295670440094D0ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD8861A029B879BE0022869D /* ingredientTmp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ingredientTmp.swift; sourceTree = "<group>"; };
 		CDBD23A329991D0F004B3FD9 /* RecipeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFactory.swift; sourceTree = "<group>"; };
 		CDFD3A5C2993B10100CF066D /* FullRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullRecipeViewController.swift; sourceTree = "<group>"; };
 		CDFD3A5D2993B10100CF066D /* FullRecipeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullRecipeViewController.xib; sourceTree = "<group>"; };
@@ -88,7 +89,6 @@
 		E411A89D29953921005BBAE1 /* EditRecipeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditRecipeViewController.xib; sourceTree = "<group>"; };
 		E41FE2AE29B7F282007FD7D9 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IngredientTableViewCell.swift; path = ../IngredientTableViewCell.swift; sourceTree = "<group>"; };
 		E41FE2AF29B7F282007FD7D9 /* IngredientTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = IngredientTableViewCell.xib; path = ../IngredientTableViewCell.xib; sourceTree = "<group>"; };
-		E41FE2B229B7F72F007FD7D9 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		E4EF2E7B29B7DCC7005D83C0 /* StepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StepTableViewCell.swift; path = ../StepTableViewCell.swift; sourceTree = "<group>"; };
 		E4EF2E7C29B7DCC7005D83C0 /* StepTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = StepTableViewCell.xib; path = ../StepTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +131,7 @@
 				CD5505072987085C00F19624 /* Rating.swift */,
 				CD550509298708B700F19624 /* Ingredient.swift */,
 				CD55050B298708CF00F19624 /* RecipeStep.swift */,
+				CD8861A029B879BE0022869D /* ingredientTmp.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -302,9 +303,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD8861A129B879BE0022869D /* ingredientTmp.swift in Sources */,
 				E41FE2B029B7F282007FD7D9 /* IngredientTableViewCell.swift in Sources */,
 				E4EF2E7D29B7DCC7005D83C0 /* StepTableViewCell.swift in Sources */,
-				E41FE2B329B7F72F007FD7D9 /* Ingredient.swift in Sources */,
 				E411A89E29953921005BBAE1 /* EditRecipeViewController.swift in Sources */,
 				CD55051029870FB900F19624 /* ImageFactory.swift in Sources */,
 				CD5505082987085C00F19624 /* Rating.swift in Sources */,
@@ -467,8 +468,8 @@
 				INFOPLIST_FILE = CookAPI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -494,8 +495,8 @@
 				INFOPLIST_FILE = CookAPI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

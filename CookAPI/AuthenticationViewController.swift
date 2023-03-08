@@ -38,13 +38,25 @@ class AuthenticationViewController: UIViewController {
     }
     
     @IBAction func handleRegistration(_ sender: UIButton) {
-        self.navigationController?.pushViewController(RegistrationViewController(), animated: true)
+        if self.navigationController != nil {
+            self.navigationController?.pushViewController(RegistrationViewController(), animated: true)
+        } else if self.splitViewController != nil {
+            self.splitViewController?.viewControllers.insert(RegistrationViewController(), at: 1)
+        }
     }
     
      override func viewWillAppear(_ animated: Bool) {
          handle = Auth.auth().addStateDidChangeListener { auth, user in
              if user != nil {
-                 self.navigationController?.setViewControllers([FeedViewController()], animated: true)
+                 if self.navigationController != nil {
+                     self.tabBarController?.hidesBottomBarWhenPushed = false
+                     self.navigationController?.setViewControllers([FeedViewController()], animated: true)
+                 } else if self.splitViewController != nil {
+                     self.tabBarController?.hidesBottomBarWhenPushed = false
+                     self.splitViewController?.viewControllers.insert(FeedViewController(), at: 0)
+                     self.splitViewController?.viewControllers.remove(at: 1)
+                 }
+                 self.tabBarController?.removeFromParent()
              }
          }
      }
