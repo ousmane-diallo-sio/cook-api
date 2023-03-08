@@ -6,12 +6,17 @@
 //
 
 import UIKit
+import FirebaseStorage
 
 class CellClass: UITableViewCell{
     
 }
 
 class EditRecipeViewController: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    let storage = Storage.storage()
+    
+    let db = Firestore.firestore()
 
     @IBOutlet weak var ImageVueUpload: UIImageView!
     
@@ -113,6 +118,34 @@ class EditRecipeViewController: UIViewController , UIImagePickerControllerDelega
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         
         ImageVueUpload.image = image
+        let storageRef = storage.reference()
+        let imagesRef = storageRef.child("images/new.jpg")
+
+        var data = Data()
+        data = image.jpegData(compressionQuality: 1)!
+
+        // Create a reference to the file you want to upload
+        let riversRef = storageRef.child("images/rivers.jpg")
+
+        // Upload the file to the path "images/rivers.jpg"
+        let uploadTask = riversRef.putData(data, metadata: nil) { (metadata, error) in
+          guard let metadata = metadata else {
+            // Uh-oh, an error occurred!
+            return
+          }
+          // Metadata contains file metadata such as size, content-type.
+          let size = metadata.size
+          // You can also access to download URL after upload.
+            storageRef.downloadURL { (url, error) in
+            guard let downloadURL = url else {
+              // Uh-oh, an error occurred!
+                self.db.child("recipe").updateChildValues(["img": downloadURL])
+              return
+            }
+          }
+        }
+
+        
         
         picker.dismiss(animated: true,completion: nil)
     }
