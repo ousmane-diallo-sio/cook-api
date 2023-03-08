@@ -34,14 +34,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let authViewController = UINavigationController(rootViewController: AuthenticationViewController())
         let editRecipeVC = UINavigationController(rootViewController: EditRecipeViewController())
         let editProfile = UINavigationController(rootViewController: EditProfileViewController())
+        let aboutVC = UINavigationController(rootViewController: AboutViewController())
         authViewController.tabBarItem.title = "Authentification"
         editRecipeVC.tabBarItem.title = "Créer une recette"
         editProfile.tabBarItem.title = "Modifier profil"
+        aboutVC.tabBarItem.title = "A propos"
         
         tabBarController.viewControllers = [
             authViewController,
             editRecipeVC,
             editProfile,
+            aboutVC
         ]
         tabBarController.hidesBottomBarWhenPushed = true
         window.rootViewController = UINavigationController(rootViewController: tabBarController)
@@ -59,15 +62,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let editRecipeVC = UINavigationController(rootViewController: EditRecipeViewController())
         let editProfile = UINavigationController(rootViewController: EditProfileViewController())
+        let aboutVC = UINavigationController(rootViewController: AboutViewController())
         
         splitViewController.tabBarItem.title = "Authentification"
         editRecipeVC.tabBarItem.title = "Créer une recette"
         editProfile.tabBarItem.title = "Modifier profil"
+        aboutVC.tabBarItem.title = "A propos"
         
         tabBarController.viewControllers = [
             splitViewController,
             editRecipeVC,
             editProfile,
+            aboutVC
         ]
         tabBarController.hidesBottomBarWhenPushed = true
         
