@@ -25,14 +25,16 @@ class AuthenticationViewController: UIViewController {
         self.title = "Connexion"
         self.mailErrorLabel.text = nil
         self.passwordErrorLabel.text = nil
+        self.passwordTextField.isSecureTextEntry = true
     }
     
     @IBAction func handleLogin(_ sender: UIButton) {
-        Authentication.signIn(email: self.mailTextField.text ?? "", password: self.passwordTextField.text ?? "")
-        /*
-        self.mailErrorLabel.text = "E-mail ou mot de passe invalide"
-        self.passwordErrorLabel.text = "E-mail ou mot de passe invalide"
-         */
+        Task {
+            await Authentication.signIn(email: self.mailTextField.text ?? "", password: self.passwordTextField.text ?? "")
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.showToast(message: "Identifiants incorrects")
+        }  
     }
     
     @IBAction func handleRegistration(_ sender: UIButton) {
